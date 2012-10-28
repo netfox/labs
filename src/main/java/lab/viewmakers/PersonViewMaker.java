@@ -27,17 +27,11 @@ public class PersonViewMaker implements IViewMaker {
 
         ApplictionResources applictionResources = ApplictionResources.getInstance();
         InputStream xsltInputStream = applictionResources.getResourceAsStream(flScript);
-
         HttpSession session = request.getSession();
         session.setAttribute("birthDate", (String) request.getParameter("data"));
-
         DtoPerson person = new DtoPerson((String) session.getAttribute("firstName"), (String) session.getAttribute("lastName"), (String) session.getAttribute("middleName"), (String) session.getAttribute("birthDate"));
-
         Source xmlSource = (new DTOPersonToXmlConverter()).convertToXml(person);
-        
         XSLTTransformer transformer = new XSLTTransformer();
-
-
 
         try {
             transformer.transform(xmlSource, xsltInputStream, response.getOutputStream());

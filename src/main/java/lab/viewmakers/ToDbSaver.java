@@ -20,7 +20,7 @@ public class ToDbSaver implements IViewMaker {
 
         HttpSession session = request.getSession();
 
-        Person person = new Person((String) session.getAttribute("firstName"), (String) session.getAttribute("lastName"), (String) session.getAttribute("middleName"), (String) request.getParameter("data"));
+        Person person = new Person((String) session.getAttribute("firstName"), (String) session.getAttribute("lastName"), (String) session.getAttribute("middleName"), (String) session.getAttribute("middleName"));
         (new PersonDao()).insert(person);
 
         return "index.jsp";

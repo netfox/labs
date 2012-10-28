@@ -1,5 +1,6 @@
 package lab.converters;
 
+import lab.domain.Person;
 import lab.dto.DtoPerson;
 
 import java.util.HashSet;
@@ -14,9 +15,9 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public class DTOBetweenPersonsConverter {
-    public Set<DtoPerson> convert(List<DtoPerson> persons) {
+    public Set<DtoPerson> convert(List<Person> persons) {
         Set<DtoPerson> personDtoSet = new HashSet<DtoPerson>();
-        for (DtoPerson person : persons) {
+        for (Person person : persons) {
             personDtoSet.add(new DtoPerson(person.getFisrtName(), person.getLastName(), person.getMiddleName(),
                     person.getBirthDate()));
         }

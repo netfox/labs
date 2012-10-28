@@ -18,8 +18,8 @@ public class DB {
     private List mPersons = new ArrayList();
 
     private DB() {
-        mPersons.add(new Person("Artyom", "Strok", "+375447373503", "Oktyabrskaya"));
-        mPersons.add(new Person("Maxim", "Strok", "+375445435354", "Oktyabrskaya"));
+        mPersons.add(new Person("Peter", "Ivanov", "Paul", "23.12.1965"));
+        mPersons.add(new Person("Mary", "Cerch", "Kate", "17.09.1986"));
     }
 
     public static DB connect() {

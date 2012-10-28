@@ -8,24 +8,24 @@ package lab.dto;
  * To change this template use File | Settings | File Templates.
  */
 public class DtoPerson {
-    private String mFisrtName;
+    private String mFirstName;
     private String mLastName;
     private String mMiddleName;
     private String mBirthDate;
 
     public DtoPerson(String fisrtName, String lastName, String middleName, String birthDate) {
-        mFisrtName = fisrtName;
+        mFirstName = fisrtName;
         mLastName = lastName;
         mMiddleName = middleName;
         mBirthDate = birthDate;
     }
 
-    public String getFisrtName() {
-        return mFisrtName;
+    public String getFirstName() {
+        return mFirstName;
     }
 
-    public void setFisrtName(String fisrtName) {
-        mFisrtName = fisrtName;
+    public void setFirstName(String firstName) {
+        mFirstName = firstName;
     }
 
     public String getLastName() {

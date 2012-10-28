@@ -1,6 +1,7 @@
 package lab.converters;
 
 import lab.dto.DtoPerson;
+import lab.dto.DtoPersons;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -8,7 +9,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Source;
 import javax.xml.transform.dom.DOMSource;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,18 +19,24 @@ import java.util.List;
  */
 public class DTOPersonsToXmlConverter {
 
-    public Source convertToXml(List<DtoPerson> persons) {
+    public Source convertToXml(DtoPersons persons) {
 
         Document doc = null;
         try {
             doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
 
-            Element personsList = doc.createElement("persons");
-            doc.appendChild(personsList);
+            Element rootElement = doc.createElement("root");
+            doc.appendChild(rootElement);
 
-            for (DtoPerson person : persons) {
+            Element personsList = doc.createElement("persons");
+            rootElement.appendChild(personsList);
+
+            for (DtoPerson person : persons.getDtoPersons()) {
                 personsList.appendChild(buildContactElement(doc, person));
             }
+            rootElement.appendChild(buildSimpleElement(doc, "path", persons.getPath()));
+            rootElement.appendChild(buildSimpleElement(doc, "currentPage", String.valueOf(persons.getCurrentPage())));
+            rootElement.appendChild(buildSimpleElement(doc, "numOfPages", String.valueOf(persons.getNumOfPages())));
         } catch (ParserConfigurationException pce) {
             pce.printStackTrace();
         }
@@ -39,11 +45,17 @@ public class DTOPersonsToXmlConverter {
 
     private static Element buildContactElement(Document doc, DtoPerson person){
         Element personElem = doc.createElement("person");
-        personElem.setAttribute("firstName", person.getFisrtName());
-        personElem.setAttribute("lastName", person.getLastName());
-        personElem.setAttribute("middleName",  person.getMiddleName());
-        personElem.setAttribute("birthDate", person.getBirthDate());
+        personElem.appendChild(buildSimpleElement(doc, "firstName", person.getFirstName()));
+        personElem.appendChild(buildSimpleElement(doc, "lastName", person.getLastName()));
+        personElem.appendChild(buildSimpleElement(doc, "middleName", person.getMiddleName()));
+        personElem.appendChild(buildSimpleElement(doc, "birthDate", person.getBirthDate()));
         return personElem;
+    }
+
+    private static Element buildSimpleElement(Document doc, String node, String value) {
+        Element childElement = doc.createElement(node);
+        childElement.setTextContent(value);
+        return childElement;
     }
 }
 

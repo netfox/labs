@@ -1,10 +1,7 @@
 package lab.controller;
 
 import lab.util.UrlUtil;
-import lab.viewmakers.GeneralViewMaker;
-import lab.viewmakers.IViewMaker;
-import lab.viewmakers.PersonViewMaker;
-import lab.viewmakers.ToDbSaver;
+import lab.viewmakers.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -30,6 +27,7 @@ public class PageViewer {
         commandMap = new HashMap<String, IViewMaker>();
         commandMap.put("view.fc", new PersonViewMaker());
         commandMap.put("add.fc", new ToDbSaver());
+        commandMap.put("list.fc", new PersonsListViewMaker());
     }
 
     public IViewMaker getCommand() {

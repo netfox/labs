@@ -34,18 +34,16 @@ public class DTOPersonToXmlConverter {
 
     private static Element buildContactElement(Document doc, DtoPerson person){
         Element personElem = doc.createElement("person");
-        Element childElement = doc.createElement("firstName");
-        childElement.setTextContent(person.getLastName());
-        personElem.appendChild(childElement);
-        childElement = doc.createElement("lastName");
-        childElement.setTextContent(person.getLastName());
-        personElem.appendChild(childElement);
-        childElement = doc.createElement("middleName");
-        childElement.setTextContent(person.getMiddleName());
-        personElem.appendChild(childElement);
-        childElement = doc.createElement("birthDate");
-        childElement.setTextContent(person.getBirthDate());
-        personElem.appendChild(childElement);
+        personElem.appendChild(buildSimpleElement(doc, "firstName", person.getFirstName()));
+        personElem.appendChild(buildSimpleElement(doc, "lastName", person.getLastName()));
+        personElem.appendChild(buildSimpleElement(doc, "middleName", person.getMiddleName()));
+        personElem.appendChild(buildSimpleElement(doc, "birthDate", person.getBirthDate()));
         return personElem;
+    }
+
+    private static Element buildSimpleElement(Document doc, String node, String value) {
+        Element childElement = doc.createElement(node);
+        childElement.setTextContent(value);
+        return childElement;
     }
 }

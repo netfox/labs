@@ -11,7 +11,9 @@ import java.util.Set;
  */
 public class DtoPersons {
     private Set<DtoPerson> mPersons;
-    private String path;
+    private String mPath;
+    private int mCurrentPage;
+    private int mNumOfPages;
 
     public Set<DtoPerson> getDtoPersons() {
         return mPersons;
@@ -19,5 +21,29 @@ public class DtoPersons {
 
     public void setPersons(Set<DtoPerson> persons) {
         mPersons = persons;
+    }
+
+    public String getPath() {
+        return mPath;
+    }
+
+    public void setPath(String path) {
+        mPath = path;
+    }
+
+    public int getCurrentPage() {
+        return mCurrentPage;
+    }
+
+    public void setCurrentPage(int currentPage) {
+        mCurrentPage = currentPage;
+    }
+
+    public int getNumOfPages() {
+        return mNumOfPages;
+    }
+
+    public void setNumOfPages(int numOfPages) {
+        mNumOfPages = numOfPages;
     }
 }

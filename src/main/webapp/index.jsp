@@ -9,9 +9,9 @@
 <form action="form1.jsp" method="post">
     <input type="submit" value="New person"/>
 </form>
-<%--<form action="list.fc" method="post">
+<form action="list.fc" method="post">
     <input type="submit" value="All persons">
-</form>--%>
+</form>
 
 </body>
 </html>
