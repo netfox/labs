@@ -7,29 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaec43d6-0082-4150-ac42-4d1500ddf069" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-io-1.3.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xpp3_min-1.1.3.4.O.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xstream-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_thoughtworks_xstream_xstream_1_4_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lab/exceptions/IteratorException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lab/valuelisthandler/PersonsListHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lab/valuelisthandler/ValueListHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lab/valuelisthandler/ValueListIterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonsListViewMaker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/transformfiles/persons.xsl" />
-      <change type="DELETED" beforePath="E:\FOX\sysoi\IlyaSkiba-labs-1025d0d\lab-spescourse\src\main\java\lab\dto\DTOViewPerson.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/controller/PageViewer.java" afterPath="$PROJECT_DIR$/src/main/java/lab/controller/PageViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/converters/DTOBetweenPersonsConverter.java" afterPath="$PROJECT_DIR$/src/main/java/lab/converters/DTOBetweenPersonsConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonToXmlConverter.java" afterPath="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonToXmlConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonsToXmlConverter.java" afterPath="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonsToXmlConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/db/DB.java" afterPath="$PROJECT_DIR$/src/main/java/lab/db/DB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java" afterPath="$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/dto/DtoPersons.java" afterPath="$PROJECT_DIR$/src/main/java/lab/dto/DtoPersons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonViewMaker.java" afterPath="$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonViewMaker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lab/viewmakers/ToDbSaver.java" afterPath="$PROJECT_DIR$/src/main/java/lab/viewmakers/ToDbSaver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="interceptor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -214,37 +193,8 @@
       <file leaf-file-name="DtoPerson.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="27" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
+            <state line="19" column="58" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lab/db/DB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="54" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonViewMaker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonViewMaker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToDbSaver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lab/viewmakers/ToDbSaver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="51" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -269,6 +219,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DTOBetweenPersonsConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOBetweenPersonsConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="31" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#456#467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/domain/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DB.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/db/DB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="44" selection-start="755" selection-end="755" vertical-scroll-proportion="0.64412236">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="persons.xsl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/transformfiles/persons.xsl">
           <provider selected="true" editor-type-id="text-editor">
@@ -287,10 +266,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonsListViewMaker.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersonsListViewMaker.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonsListViewMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="62" selection-start="1116" selection-end="1116" vertical-scroll-proportion="-0.7379421">
+            <state line="85" column="23" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -336,10 +315,10 @@
         <option value="$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonsToXmlConverter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/transformfiles/persons.xsl" />
-        <option value="$PROJECT_DIR$/src/main/java/lab/db/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonViewMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab/viewmakers/ToDbSaver.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonToXmlConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lab/db/DB.java" />
       </list>
     </option>
   </component>
@@ -629,6 +608,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interceptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lab-spescourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1131,7 +1140,15 @@
       <created>1351460853114</created>
       <updated>1351460853114</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fourth lab (value list handler)">
+      <created>1351466591597</created>
+      <updated>1351466591597</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fourth lab (value list handler)">
+      <created>1351466798083</created>
+      <updated>1351466798083</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1166,18 +1183,18 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39819458" sideWeight="0.8582474" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32698095" sideWeight="0.45747423" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32798395" sideWeight="0.59987116" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998997" sideWeight="0.48453608" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32798395" sideWeight="0.39755154" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32798395" sideWeight="0.39561856" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998997" sideWeight="0.49484536" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39918256" sideWeight="0.66700715" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20940721" sideWeight="0.67301905" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32698095" sideWeight="0.5380155" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20682989" sideWeight="0.672016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698095" sideWeight="0.5380155" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1221,7 +1238,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="third lab (xslt)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fourth lab (value list handler)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1237,6 +1254,7 @@
     <MESSAGE value="first lab" />
     <MESSAGE value="second lab (filters)" />
     <MESSAGE value="third lab (xslt)" />
+    <MESSAGE value="fourth lab (value list handler)" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1292,13 +1310,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/controller/PageViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="58" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab/exceptions/IteratorException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="34" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
@@ -1324,42 +1335,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOBetweenPersonsConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#456#467#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab/valuelisthandler/PersonsListHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="392" selection-end="404" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/dto/DtoPersons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="27" selection-start="334" selection-end="345" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/db/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="54" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,22 +1354,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/lab/viewmakers/ToDbSaver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="51" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonsToXmlConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="7" selection-start="1546" selection-end="2309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonToXmlConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="5" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1411,10 +1376,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab/viewmakers/PersonsListViewMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="62" selection-start="1116" selection-end="1116" vertical-scroll-proportion="-0.7379421">
+        <state line="85" column="23" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/dto/DtoPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/dto/DtoPersons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="334" selection-end="345" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonToXmlConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="5" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOPersonsToXmlConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="7" selection-start="1546" selection-end="2309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/converters/DTOBetweenPersonsConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="31" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#456#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/domain/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/db/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="44" selection-start="755" selection-end="755" vertical-scroll-proportion="0.64412236">
+          <folding />
         </state>
       </provider>
     </entry>

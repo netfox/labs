@@ -29,7 +29,7 @@ public class DB {
         return database;
     }
 
-    public List<DtoPerson> getContacts() {
+    public List<DtoPerson> getPersons() {
         return mPersons;
     }
 
