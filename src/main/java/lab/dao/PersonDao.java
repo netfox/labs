@@ -15,13 +15,33 @@ import java.util.List;
 public class PersonDao implements IDao {
     @Override
     public List loadAll() {
-        return DB.connect().getContacts();
+        return DB.connect().getPersons();
     }
 
     @Override
-    public void insert(Object person) {
-        if (person instanceof Person) {
-            DB.connect().insertPerson((Person)person);
+    public void insert(Object o) {
+        if (o instanceof Person) {
+            DB.connect().insertPerson((Person)o);
         }
+    }
+
+    @Override
+    public Object retrieve(Long id) {
+        return DB.connect().retrievePerson(id);
+    }
+
+    @Override
+    public void update(Object o) {
+        if (o instanceof Person) {
+            DB.connect().updatePerson((Person)o);
+        }
+    }
+
+    @Override
+    public boolean delete(Object o) {
+        if (o instanceof Person) {
+            return DB.connect().deletePerson((Person)o);
+        }
+        return false;
     }
 }

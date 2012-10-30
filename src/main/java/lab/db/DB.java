@@ -4,6 +4,7 @@ import lab.domain.Person;
 import lab.dto.DtoPerson;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -35,5 +36,34 @@ public class DB {
 
     public void insertPerson(Person person) {
         mPersons.add(person);
+    }
+
+    public Person retrievePerson(Long id) {
+        Iterator iterator = mPersons.iterator();
+        Person person = null;
+        while (iterator.hasNext()) {
+            if ((person = (Person)iterator.next()).getId() == id) {
+                return person;
+            }
+        }
+        return null;
+    }
+
+    public void updatePerson(Person person) {
+        Iterator iterator = mPersons.iterator();
+        Person old = null;
+        while (iterator.hasNext()) {
+            if ((old = (Person)iterator.next()).getId() == person.getId()) {
+                old.setFirstName(person.getFirstName());
+                old.setLastName(person.getLastName());
+                old.setMiddleName(person.getMiddleName());
+                old.setBirthDate(person.getBirthDate());
+                return;
+            }
+        }
+    }
+
+    public boolean deletePerson(Person person) {
+        return mPersons.remove(person);
     }
 }

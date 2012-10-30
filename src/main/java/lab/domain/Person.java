@@ -9,25 +9,25 @@ package lab.domain;
  */
 public class Person extends IdHandler{
 
-    private String mFisrtName;
+    private String mFirstName;
     private String mLastName;
     private String mMiddleName;
     private String mBirthDate;
 
-    public Person(String fisrtName, String lastName, String middleName, String birthDate) {
+    public Person(String firstName, String lastName, String middleName, String birthDate) {
         super();
-        mFisrtName = fisrtName;
+        mFirstName = firstName;
         mLastName = lastName;
         mMiddleName = middleName;
         mBirthDate = birthDate;
     }
 
-    public String getFisrtName() {
-        return mFisrtName;
+    public String getFirstName() {
+        return mFirstName;
     }
 
-    public void setFisrtName(String fisrtName) {
-        mFisrtName = fisrtName;
+    public void setFirstName(String firstName) {
+        mFirstName = firstName;
     }
 
     public String getLastName() {

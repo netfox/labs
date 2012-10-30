@@ -12,4 +12,7 @@ import java.util.List;
 public interface IDao {
     List loadAll();
     void insert(Object o);
+    Object retrieve(Long id);
+    void update(Object o);
+    boolean delete(Object o);
 }

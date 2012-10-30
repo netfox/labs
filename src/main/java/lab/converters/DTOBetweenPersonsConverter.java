@@ -18,7 +18,7 @@ public class DTOBetweenPersonsConverter {
     public Set<DtoPerson> convert(List<Person> persons) {
         Set<DtoPerson> personDtoSet = new HashSet<DtoPerson>();
         for (Person person : persons) {
-            personDtoSet.add(new DtoPerson(person.getFisrtName(), person.getLastName(), person.getMiddleName(),
+            personDtoSet.add(new DtoPerson(person.getFirstName(), person.getLastName(), person.getMiddleName(),
                     person.getBirthDate()));
         }
         return personDtoSet;
