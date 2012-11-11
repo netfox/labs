@@ -4,16 +4,10 @@ import javax.faces.bean.SessionScoped;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: meloman
- * Date: 13.09.12
- * Time: 16:56
- */
 @SessionScoped
 public class SessionAttribute {
     private String param;
-    private static List<String> accessibleNavigation = Arrays.asList("add.jsp", "/index.jsp", "/form1.jsp",
+    private static final List<String> accessibleNavigation = Arrays.asList("add.jsp", "/index.jsp", "/form1.jsp",
             "/form2.jsp", "/form3.jsp", "/form4.jsp", "/error.jsp");
 
     public String getParam() {

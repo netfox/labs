@@ -16,10 +16,10 @@ import java.util.ListIterator;
  */
 public class ValueListHandler implements ValueListIterator {
 
-    protected List list;
-    protected ListIterator listIterator;
+    private List list;
+    private ListIterator listIterator;
 
-    public ValueListHandler() { }
+    protected ValueListHandler() { }
 
     protected void setList(List list)  throws IteratorException {
         this.list = list;
@@ -32,7 +32,7 @@ public class ValueListHandler implements ValueListIterator {
     public Collection getList() {  return list;}
 
     public int getSize() throws IteratorException {
-        int size = 0;
+        int size;
 
         if (list != null)
             size = list.size();
@@ -42,7 +42,7 @@ public class ValueListHandler implements ValueListIterator {
     }
 
     public Object getCurrentElement()  throws IteratorException {
-        Object obj = null;
+        Object obj;
         if (list != null)  {
             int currIndex = listIterator.nextIndex();
             obj = list.get(currIndex);
@@ -52,7 +52,7 @@ public class ValueListHandler implements ValueListIterator {
 
     public List getPreviousElements(int count)  throws IteratorException{
         int i = 0;
-        Object object = null;
+        Object object;
         LinkedList list = new LinkedList();
 
         if (listIterator != null) {
@@ -69,7 +69,7 @@ public class ValueListHandler implements ValueListIterator {
     public List getNextElements(int count)
             throws IteratorException {
         int i = 0;
-        Object object = null;
+        Object object;
         LinkedList list = new LinkedList();
         if(listIterator != null){
             while(  listIterator.hasNext() && (i < count) ){

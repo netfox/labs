@@ -1,6 +1,6 @@
 package lab.controller;
 
-import lab.util.ApplictionResources;
+import lab.util.ApplicationResources;
 import lab.viewmakers.IViewMaker;
 
 import javax.servlet.RequestDispatcher;
@@ -22,6 +22,9 @@ public class FrontController extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
+        ApplicationResources applicationResources = ApplicationResources.getInstance();
+        applicationResources.setContext(getServletContext());
+
     }
 
     public void destroy() {
@@ -31,23 +34,15 @@ public class FrontController extends HttpServlet {
                                   HttpServletResponse response) throws ServletException,
             IOException {
 
-        ApplictionResources applictionResources = ApplictionResources.getInstance();
-        applictionResources.setContext(getServletContext());
-
         PageViewer helper = new PageViewer(request);
         IViewMaker command = helper.getCommand();
         String page = command.makeView(request, response);
-
-
-
-
         dispatch(request, response, page);
     }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException,
             IOException {
-        //super.doGet(request, response);
 
         processRequest(request, response);
     }
@@ -63,8 +58,8 @@ public class FrontController extends HttpServlet {
                             HttpServletResponse response, String page)
             throws IOException, ServletException {
         if (page.contains("index")) {
-            page.replace(".fc", ".jsp");
-            response.sendRedirect("/" + page);
+            String newPage = page.replace(".fc", ".jsp");
+            response.sendRedirect("/" + newPage);
         } else {
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(page);
             dispatcher.forward(request, response);

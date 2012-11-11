@@ -18,6 +18,17 @@ public class UnitOfWork implements IUnitOfWork {
     private List<IIdHandler> mNewObjects = new ArrayList<IIdHandler>();
     private List<IIdHandler> mDirtyObjects = new ArrayList<IIdHandler>();
     private List<IIdHandler> mDeletedObjects = new ArrayList<IIdHandler>();
+
+    private static UnitOfWork instance;
+
+    private UnitOfWork() {}
+
+    public static UnitOfWork getInstance() {
+        if (instance == null) {
+            instance = new UnitOfWork();
+        }
+        return instance;
+    }
     @Override
     public void registerNew(IIdHandler object) {
         if (object != null &&
@@ -69,26 +80,29 @@ public class UnitOfWork implements IUnitOfWork {
     }
 
     void insert() {
-        int nNew = mNewObjects.size();
         PersonDao dao = new PersonDao();
-        for ( int i = 0; i < nNew; i ++) {
-            dao.insert(mNewObjects.get(i));
+        int nPersons = mNewObjects.size();
+        for (int index = 0; index < nPersons; index ++) {
+            dao.insert(mNewObjects.get(index));
         }
+        mNewObjects.clear();
     }
 
     void update() {
-        int nUpdate = mDirtyObjects.size();
         PersonDao dao = new PersonDao();
-        for ( int i = 0; i < nUpdate; i ++) {
-            dao.update(mDirtyObjects.get(i));
+        int nPersons = mDirtyObjects.size();
+        for (int index = 0; index < nPersons; index ++) {
+            dao.update(mDirtyObjects.get(index));
         }
+       mDirtyObjects.clear();
     }
 
     void delete() {
-        int nDelete = mDeletedObjects.size();
         PersonDao dao = new PersonDao();
-        for ( int i = 0; i < nDelete; i ++) {
-            dao.delete(mDeletedObjects.get(i));
+        int nPersons = mDeletedObjects.size();
+        for (int index = 0; index < nPersons; index ++) {
+            dao.delete(mDeletedObjects.get(index));
         }
+        mDeletedObjects.clear();
     }
 }

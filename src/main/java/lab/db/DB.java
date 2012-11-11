@@ -35,14 +35,19 @@ public class DB {
     }
 
     public void insertPerson(Person person) {
-        mPersons.add(person);
+        Person obj;
+        if ((obj = retrievePerson(person.getId())) != null) {
+            mPersons.set(mPersons.indexOf(obj), person); //remove(obj);
+        } else {
+            mPersons.add(person);
+        }
     }
 
     public Person retrievePerson(Long id) {
         Iterator iterator = mPersons.iterator();
-        Person person = null;
+        Person person;
         while (iterator.hasNext()) {
-            if ((person = (Person)iterator.next()).getId() == id) {
+            if ((person = (Person)iterator.next()).getId().equals(id)) {
                 return person;
             }
         }
@@ -51,13 +56,11 @@ public class DB {
 
     public void updatePerson(Person person) {
         Iterator iterator = mPersons.iterator();
-        Person old = null;
+        Person old;
         while (iterator.hasNext()) {
-            if ((old = (Person)iterator.next()).getId() == person.getId()) {
-                old.setFirstName(person.getFirstName());
-                old.setLastName(person.getLastName());
-                old.setMiddleName(person.getMiddleName());
-                old.setBirthDate(person.getBirthDate());
+            if ((old = (Person)iterator.next()).getId().equals(person.getId())) {
+                mPersons.remove(old);
+                mPersons.add(person);
                 return;
             }
         }

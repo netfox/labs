@@ -4,7 +4,8 @@ package lab.viewmakers;
 import lab.converters.DTOPersonToXmlConverter;
 import lab.dto.DtoPerson;
 import lab.transformers.XSLTTransformer;
-import lab.util.ApplictionResources;
+import lab.util.ApplicationResources;
+import lab.util.UrlUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,10 +26,10 @@ public class PersonViewMaker implements IViewMaker {
     public String makeView(HttpServletRequest request, HttpServletResponse response) {
         String flScript = "/transformfiles/person.xsl";
 
-        ApplictionResources applictionResources = ApplictionResources.getInstance();
-        InputStream xsltInputStream = applictionResources.getResourceAsStream(flScript);
+        ApplicationResources applicationResources = ApplicationResources.getInstance();
+        InputStream xsltInputStream = applicationResources.getResourceAsStream(flScript);
         HttpSession session = request.getSession();
-        session.setAttribute("birthDate", (String) request.getParameter("data"));
+        session.setAttribute("birthDate", request.getParameter("data"));
         DtoPerson person = new DtoPerson((String) session.getAttribute("firstName"), (String) session.getAttribute("lastName"), (String) session.getAttribute("middleName"), (String) session.getAttribute("birthDate"));
         Source xmlSource = (new DTOPersonToXmlConverter()).convertToXml(person);
         XSLTTransformer transformer = new XSLTTransformer();
@@ -39,9 +40,6 @@ public class PersonViewMaker implements IViewMaker {
             e.printStackTrace();
         }
 
-        String pageName = request.getRequestURI().substring(request.getContextPath().length());
-        String page = pageName.replace("fc", "jsp");
-
-        return page;
+        return UrlUtil.getPage(request);
     }
 }

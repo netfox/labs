@@ -1,5 +1,7 @@
 package lab.domain;
 
+import lab.unitofwork.UnitOfWork;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Tatsiana
@@ -20,6 +22,7 @@ public class Person extends IdHandler{
         mLastName = lastName;
         mMiddleName = middleName;
         mBirthDate = birthDate;
+        UnitOfWork.getInstance().registerNew(this);
     }
 
     public String getFirstName() {
@@ -28,6 +31,7 @@ public class Person extends IdHandler{
 
     public void setFirstName(String firstName) {
         mFirstName = firstName;
+        UnitOfWork.getInstance().registerDirty(this);
     }
 
     public String getLastName() {
@@ -36,6 +40,7 @@ public class Person extends IdHandler{
 
     public void setLastName(String lastName) {
         mLastName = lastName;
+        UnitOfWork.getInstance().registerDirty(this);
     }
 
     public String getMiddleName() {
@@ -44,6 +49,7 @@ public class Person extends IdHandler{
 
     public void setMiddleName(String middleName) {
         mMiddleName = middleName;
+        UnitOfWork.getInstance().registerDirty(this);
     }
 
     public String getBirthDate() {
@@ -52,5 +58,6 @@ public class Person extends IdHandler{
 
     public void setBirthDate(String birthDate) {
         mBirthDate = birthDate;
+        UnitOfWork.getInstance().registerDirty(this);
     }
 }

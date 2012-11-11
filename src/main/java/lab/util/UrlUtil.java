@@ -16,12 +16,11 @@ public class UrlUtil {
   }
 
   public static String getPage(HttpServletRequest request) {
-    String pageName = null;
+    String pageName;
     if (request.getRequestURI().contains("index.jsp".replace("jsp", "fc"))) {
       return request.getContextPath() + "/" + "index.jsp";
     }
     pageName = request.getRequestURI().substring(request.getContextPath().length());
-    String page = pageName.replace("fc", "jsp");
-    return page;
+    return pageName.replace("fc", "jsp");
   }
 }

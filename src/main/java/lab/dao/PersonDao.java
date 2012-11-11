@@ -39,9 +39,7 @@ public class PersonDao implements IDao {
 
     @Override
     public boolean delete(Object o) {
-        if (o instanceof Person) {
-            return DB.connect().deletePerson((Person)o);
-        }
-        return false;
+        return (o instanceof Person) &&
+            DB.connect().deletePerson((Person)o);
     }
 }

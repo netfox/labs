@@ -7,7 +7,7 @@ import lab.domain.Person;
 import lab.dto.DtoPersons;
 import lab.exceptions.IteratorException;
 import lab.transformers.XSLTTransformer;
-import lab.util.ApplictionResources;
+import lab.util.ApplicationResources;
 import lab.util.UrlUtil;
 import lab.valuelisthandler.PersonsListHandler;
 
@@ -27,21 +27,26 @@ import java.util.List;
  */
 public class PersonsListViewMaker implements IViewMaker {
 
-    public static final int RECORDS_PER_PAGE = 2;
-    public static final String CURRENT_PAGE_PARAM = "current_page";
-    public static final String COMMAND_PARAM = "command";
-    public static final String COMMAND_NEXT = "nextPage";
-    public static final String COMMAND_PREVIOUS = "previousPage";
+    private static final int RECORDS_PER_PAGE = 2;
+    private static final String CURRENT_PAGE_PARAM = "current_page";
+    private static final String COMMAND_PARAM = "command";
+    private static final String COMMAND_NEXT = "nextPage";
+    private static final String COMMAND_PREVIOUS = "previousPage";
+    private static final String COMMAND_HOME = "home";
 
     @Override
     public String makeView(HttpServletRequest request, HttpServletResponse response) {
+        if (COMMAND_HOME.equals(request.getParameter(COMMAND_PARAM))) {
+            return "index.jsp";
+        }
+
         String flScript = "/transformfiles/persons.xsl";
 
         PersonsListHandler personsListHandler = new PersonsListHandler();
         personsListHandler.setPersonDao(new PersonDao());
 
-        ApplictionResources applictionResources = ApplictionResources.getInstance();
-        InputStream xsltInputStream = applictionResources.getResourceAsStream(flScript);
+        ApplicationResources applicationResources = ApplicationResources.getInstance();
+        InputStream xsltInputStream = applicationResources.getResourceAsStream(flScript);
 
         try {
             personsListHandler.executeSearch();
@@ -68,7 +73,7 @@ public class PersonsListViewMaker implements IViewMaker {
     }
 
     private int getCurrentPage(String command, String pageParam) {
-        int currentPage = 0;
+        int currentPage;
         int page = 0;
         if (pageParam != null) {
             page = Integer.valueOf(pageParam).intValue();

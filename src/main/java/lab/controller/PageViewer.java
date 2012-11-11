@@ -15,7 +15,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class PageViewer {
-    private HttpServletRequest request;
+    private final HttpServletRequest request;
     private Map<String, IViewMaker> commandMap;
 
     public PageViewer(HttpServletRequest request) {

@@ -17,10 +17,10 @@ import java.io.OutputStream;
  * To change this template use File | Settings | File Templates.
  */
 public class XSLTTransformer {
-    public void transform(Source xmlSource, InputStream xslSourseStream, OutputStream resultStream) {
+    public void transform(Source xmlSource, InputStream xslSourceStream, OutputStream resultStream) {
         try {
             TransformerFactory transFact = TransformerFactory.newInstance();
-            Source xsltSource = new StreamSource(xslSourseStream);
+            Source xsltSource = new StreamSource(xslSourceStream);
             Transformer trans = transFact.newTransformer(xsltSource);
             trans.transform(xmlSource, new StreamResult(resultStream));
         } catch (TransformerException e) {

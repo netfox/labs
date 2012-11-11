@@ -10,18 +10,18 @@ package lab.util;
 import javax.servlet.ServletContext;
 import java.io.InputStream;
 
-public class ApplictionResources {
+public class ApplicationResources {
 
-  private static ApplictionResources instance;
+  private static ApplicationResources instance;
   private ServletContext context;
 
-  private ApplictionResources() {
+  private ApplicationResources() {
 
   }
 
-  public static ApplictionResources getInstance() {
+  public static ApplicationResources getInstance() {
     if (instance == null) {
-      instance = new ApplictionResources();
+      instance = new ApplicationResources();
     }
     return instance;
   }

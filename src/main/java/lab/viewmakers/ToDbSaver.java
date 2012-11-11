@@ -1,7 +1,7 @@
 package lab.viewmakers;
 
-import lab.dao.PersonDao;
 import lab.domain.Person;
+import lab.unitofwork.UnitOfWork;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +21,8 @@ public class ToDbSaver implements IViewMaker {
         HttpSession session = request.getSession();
 
         Person person = new Person((String) session.getAttribute("firstName"), (String) session.getAttribute("lastName"), (String) session.getAttribute("middleName"), (String) session.getAttribute("middleName"));
-        (new PersonDao()).insert(person);
+        //(new PersonDao()).insert(person);
+        UnitOfWork.getInstance().commit();
 
         return "index.jsp";
     }

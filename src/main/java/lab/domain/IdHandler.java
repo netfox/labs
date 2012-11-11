@@ -9,7 +9,7 @@ package lab.domain;
  */
 public class IdHandler implements IIdHandler {
     private static Long mCurrCommonId = Long.valueOf(0);
-    private Long mId;
+    protected final Long mId;
     protected IdHandler() {
         mId = mCurrCommonId ++;
     }

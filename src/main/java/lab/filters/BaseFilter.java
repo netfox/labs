@@ -8,8 +8,8 @@ package lab.filters;
  * To change this template use File | Settings | File Templates.
  */
 public class BaseFilter implements InterfaceComponent {
-    protected InterfaceComponent component;
-    public BaseFilter(InterfaceComponent component) {
+    private final InterfaceComponent component;
+    protected BaseFilter(InterfaceComponent component) {
         this.component = component;
     }
     @Override

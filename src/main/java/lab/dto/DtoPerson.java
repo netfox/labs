@@ -13,8 +13,8 @@ public class DtoPerson {
     private String mMiddleName;
     private String mBirthDate;
 
-    public DtoPerson(String fisrtName, String lastName, String middleName, String birthDate) {
-        mFirstName = fisrtName;
+    public DtoPerson(String firstName, String lastName, String middleName, String birthDate) {
+        mFirstName = firstName;
         mLastName = lastName;
         mMiddleName = middleName;
         mBirthDate = birthDate;

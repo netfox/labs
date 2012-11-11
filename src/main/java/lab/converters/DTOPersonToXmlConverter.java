@@ -23,8 +23,7 @@ public class DTOPersonToXmlConverter {
         try {
             doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
 
-            Element persons = doc.createElement("person");
-            doc.appendChild(buildContactElement(doc, person));
+             doc.appendChild(buildContactElement(doc, person));
 
         } catch (ParserConfigurationException pce) {
             pce.printStackTrace();
